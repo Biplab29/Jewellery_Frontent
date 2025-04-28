@@ -4,7 +4,7 @@ import axios from 'axios';
 const Logout = () => {
   const handleLogout = async () => {
     try {
-      await axios.post('http://localhost:8080/user/logout', {}, { withCredentials: true });
+      await axios.post('https://e-jewellery-shop-.glitch.me/user/logout', {}, { withCredentials: true });
       alert('Logged out');
     } catch {
       alert('Logout failed');

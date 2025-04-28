@@ -12,7 +12,7 @@ const Login = ({ setIsLoggedIn }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:8080/user/login', form, { withCredentials: true });
+      const res = await axios.post('https://e-jewellery-shop-.glitch.me/user/login', form, { withCredentials: true });
       setMessage(res.data.message);
       setIsLoggedIn(true);
       navigate('/jewelleryManager');

@@ -9,7 +9,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:8080/user/signup', form);
+      const res = await axios.post('https://e-jewellery-shop-.glitch.me/user/signup', form);
       setMessage(res.data.message);
       
     } catch (error) {

@@ -57,7 +57,7 @@ const UpdateJewellery = () => {
       }
     }
     try {
-      await axios.put(`http://localhost:8080/jewellery/update/${id}`, payload, {
+      await axios.put(`https://e-jewellery-shop-.glitch.me/jewellery/update/${id}`, payload, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       alert('Jewellery updated successfully!');

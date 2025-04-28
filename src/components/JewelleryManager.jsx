@@ -21,7 +21,7 @@ const JewelleryManager = () => {
 
   const fetchJewellery = async () => {
     try {
-      const res = await axios.get('http://localhost:8080/jewellery/all');
+      const res = await axios.get('https://e-jewellery-shop-.glitch.me/jewellery/all');
       setJewelleryList(res.data);
     } catch (err) {
       console.error('Error fetching jewellery:', err);
@@ -53,12 +53,12 @@ const JewelleryManager = () => {
 
     try {
       if (editingId) {
-        await axios.put(`http://localhost:8080/jewellery/update/${editingId}`, payload, {
+        await axios.put(`https://e-jewellery-shop-.glitch.me/jewellery/update/${editingId}`, payload, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
         alert('Jewellery updated successfully!');
       } else {
-        await axios.post('http://localhost:8080/jewellery/add', payload, {
+        await axios.post('https://e-jewellery-shop-.glitch.me/jewellery/add', payload, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
         alert('Jewellery added successfully!');
@@ -83,7 +83,7 @@ const JewelleryManager = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/jewellery/delete/${id}`);
+      await axios.delete(`https://e-jewellery-shop-.glitch.me/jewellery/delete/${id}`);
       fetchJewellery();
     } catch (err) {
       console.error('Error deleting jewellery:', err);
